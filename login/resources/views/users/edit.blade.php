@@ -75,7 +75,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 			  </div>
 		  </div>
           <button type="submit" class="btn btn-primary" style="float:right; margin-left:10px;">Alterar</button>
-		  <button class="btn btn-danger" style="float:right;"><a style="color:white;" href="javascript:history.back()">Voltar</a></button>
+		  <button class="btn btn-danger" style="float:right;"><a style="color:white;" href="javascript:history.back(); javascript:history.back(); javascript:history.back(); javascript:history.back();">Voltar</a></button>
       </form>
   </div>
 </div>
