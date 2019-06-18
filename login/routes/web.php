@@ -12,13 +12,18 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+ Route::get('/', function () {
+     return view('welcome');
+ });
 
 Auth::routes();
 
+	Route::get('home', function () {
+    	return view('home');
+	});
 Route::resource('users', 'UserController');
+Route::resource('voos', 'VooController');
+
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>['web','auth']], function(){
@@ -30,7 +35,9 @@ Route::group(['middleware'=>['web','auth']], function(){
 		if(Auth::user()->admin == 0){
 			$user['user'] = Auth::user();
 			$user['user']->password = null;
-			return view('home', $user);
+
+			$voo['voo'] = \App\Voo::where('cpfPassageiro', $user['user']->cpf)->get();
+			return view('home', $user, $voo);
 		} else {
 			$users['users'] = \App\User::all();
 			return view('adminhome', $users);

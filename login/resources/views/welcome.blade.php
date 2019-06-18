@@ -12,7 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background: url("{{ asset("/images/bg.jpg")}}") center center;
+				background-size:cover;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -66,9 +67,9 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links" style="position:absolute; right:160px;">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="color:white; font-size:25px !important; display:flex; align-items:center; justify-content:center; margin-top:60px;">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -79,21 +80,12 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+			<div style="position:absolute; bottom:170px; left:50px; color:white; font-size:90px; font-weight:bold; text-shadow:2px 2px 2px #000;">
+				B.U.N.D.A AirLines
+			</div>
+			<div style="position:absolute; bottom:140px; left:50px; color:white; font-size:30px; text-shadow:1px 1px 1px #000;">
+				Ao continuar, você está sujeito à um serviço de merda.
+			</div>
         </div>
     </body>
 </html>

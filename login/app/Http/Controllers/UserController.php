@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('users.home');
     }
 
     /**
@@ -40,6 +40,9 @@ class UserController extends Controller
 	 $request->validate([
 	'name'=>'required',
 	'email'=> 'required',
+	'cpf'=> 'required',
+	'city'=> 'required',
+	'state'=> 'required',
 	'cep' => 'required',
 	'address' => 'required',
 	'number' => 'required',
@@ -49,6 +52,9 @@ class UserController extends Controller
 	  $user = new User([
 		'name' => $request->get('name'),
 		'email'=> $request->get('email'),
+		'cpf'=> $request->get('cpf'),
+		'city'=> $request->get('city'),
+		'state'=> $request->get('state'),
 		'cep'=> $request->get('cep'),
 		'address'=> $request->get('address'),
 		'number'=> $request->get('number'),
@@ -96,6 +102,9 @@ class UserController extends Controller
 	 $request->validate([
 		'name'=>'required',
 		'email'=> 'required',
+		'cpf'=> 'required',
+		'city'=> 'required',
+		'state'=> 'required',
 		'cep' => 'required',
 		'address' => 'required',
 		'number' => 'required',
@@ -106,6 +115,9 @@ class UserController extends Controller
       $user = User::find($id);
       $user->name = $request->get('name');
       $user->email = $request->get('email');
+	  $user->cpf = $request->get('cpf');
+	  $user->city = $request->get('city');
+	  $user->state = $request->get('state');
 	  $user->cep = $request->get('cep');
       $user->address = $request->get('address');
 	  $user->number = $request->get('number');

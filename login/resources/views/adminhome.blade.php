@@ -4,8 +4,8 @@
 <div class="">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+            <div class="card" style="border:1px solid black;">
+                <div class="card-header" style="border-bottom:1px solid black; color:white; background-color:#3490dc;">Passageiros Cadastrados</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,20 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
-                    <div class="alert alert-success">
-                        <p> You're logged in as ADMINISTRATOR </p>
-                    </div>
 
-					<a href="{{ route('users.create')}}" class="btn btn-primary">Add</a>
+					<a href="{{ route('users.create')}}" class="btn btn-success" style="float:right;">+</a>
+					<br/><br/>
                     <table class="table table-hover table-bordered" style="text-align:center;">
                         <thead>
                             <tr>
-                                <th width="5">No. </th>
-                                <th> Member Name </th>
-                                <th> Email </th>
+                                <th width="5">ID </th>
+                                <th> Passageiro </th>
+                                <th> E-mail </th>
                                 <th> Admin? </th>
-                                <th> Action </th>
+                                <th width="220px" > Ações </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,12 +33,13 @@
                                 <td> {{ $value->name }} </td>
                                 <td> {{ $value->email }} </td>
                                 <td> {{ $value->admin }} </td>
-								<td style="display:flex; align-items:center; justify-content:center;"><a href="{{ route('users.edit',$value->id)}}" class="btn btn-primary" style="float:left;">Edit</a>
+								<td width="220px" style="display:flex; align-items:center; justify-content:center;"><a href="{{ route('users.edit',$value->id)}}" class="btn btn-primary" style="float:left; width:80px !important;" >
+								Editar</a>
 
 									<form action="{{ route('users.destroy', $value->id)}}" method="post" style="float:left;">
 									  @csrf
 									  @method('DELETE')
-									  <button class="btn btn-danger" type="submit">Delete</button>
+									  <button class="btn btn-danger" style="width:80px !important; margin-left:10px;" type="submit">Apagar</button>
 									</form>
 								</td>
                             </tr>
