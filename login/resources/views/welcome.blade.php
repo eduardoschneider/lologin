@@ -80,10 +80,10 @@
                 </div>
             @endif
 
-			<div style="position:absolute; bottom:170px; left:50px; color:white; font-size:90px; font-weight:bold; text-shadow:2px 2px 2px #000;">
+			<div style="position:absolute; bottom:110px; left:50px; color:white; font-size:90px; font-weight:bold; text-shadow:2px 2px 2px #000;">
 				B.U.N.D.A AirLines
 			</div>
-			<div style="position:absolute; bottom:140px; left:50px; color:white; font-size:30px; text-shadow:1px 1px 1px #000;">
+			<div style="position:absolute; bottom:90px; left:50px; color:white; font-size:30px; text-shadow:1px 1px 1px #000;">
 				Ao continuar, você está sujeito à um serviço de merda.
 			</div>
         </div>

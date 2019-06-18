@@ -27,7 +27,7 @@ background-color: #d0e7ec;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f5f3f7' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");}
 </style>
     <div id="app"><center>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="height:100px !important; border-radius:100px; width:30%; margin-top:30px; border:1px solid black;">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm col-md-10 col-lg-8 col-sm-12" style="height:100px !important; border-radius:100px; margin-top:30px; border:1px solid black;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     B.U.N.D.A AirLines
@@ -56,6 +56,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
                             @endif
                         @else
                             <li class="nav-item dropdown">
+								<button class="btn btn-success" style="float:left; margin-right:50px;" onclick="bottom();">Comprar Passagem</button>
                                 <a style="float:left;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -85,5 +86,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         </main>
     </div>
 </body>
-
+<script>
+function bottom() {
+	window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
 </html>

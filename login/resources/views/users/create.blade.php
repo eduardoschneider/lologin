@@ -46,11 +46,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 				  <label for="cep">CEP:</label>
 				  <input type="text" class="form-control" name="cep" maxlength="8" onkeydown="javascript: fMasc( this, mNum );"  id="cep"/>
 			  </div>
-			  <div class="form-group col-md-3">
+			  <div class="form-group col-md-2">
 				  <label for="city">Cidade:</label>
 				  <input type="text" class="form-control" name="city" id="city" readonly/>
 			  </div>
-			  <div class="form-group col-md-1">
+			  <div class="form-group col-md-2">
 				  <label for="state">Estado:</label>
 				  <input type="text" class="form-control" name="state" id="state" readonly/>
 			  </div>

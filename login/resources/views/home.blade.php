@@ -40,11 +40,11 @@
 								  <label for="address">CEP:</label>
 								  <input id="cep" type="text" class="form-control" name="cep" value='{{ $user->cep }}' onkeydown="javascript: fMasc( this, mNum );" maxlength="8"/>
 							  </div>
-								<div class="form-group col-md-3">
+								<div class="form-group col-md-2">
 								  <label for="email">Cidade :</label>
 								  <input id="city" type="text" class="form-control" name="city" value='{{ $user->city }}' readonly/>
 							  </div>
-								<div class="form-group col-md-1">
+								<div class="form-group col-md-2">
 								  <label for="email">Estado :</label>
 								  <input id="state" type="text" class="form-control" name="state" value='{{ $user->state }}' readonly/>
 							  </div>
